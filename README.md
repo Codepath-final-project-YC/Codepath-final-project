@@ -1,7 +1,7 @@
-Original App Design Project - README Template
+Original App Design Project
 ===
 
-# APP_NAME_HERE
+# Habit Tracker
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -15,12 +15,12 @@ Original App Design Project - README Template
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Health & Fitness/Productivity/Graphics & Design/Social Networking/Lifestyle
+- **Mobile:** Faster/Easy acces to camera/Upload & update easily
+- **Story:** 
+- **Market:** People who wants to track their habit and make things organized 
+- **Habit:** Maintain a healthy lifestyle/Custom UI design/Share with friends
+- **Scope:** 
 
 ## Product Spec
 
@@ -28,13 +28,18 @@ Original App Design Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User registration
+* Login/Auth
+* User profile page
+* Overview of all habits
+* Track habits
+* Creat/Delete habit
+* Share habits with friends 
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Compete with friend on continuing improvement for a habit
+* Set goals and be able to share if you accomplish the goal
 
 ### 2. Screen Archetypes
 
