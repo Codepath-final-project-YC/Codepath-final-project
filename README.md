@@ -90,26 +90,71 @@ This an app to keep track of your habits, and share with your friends.
 
 **Flow Navigation** (Screen to Screen)
 
+**Flow Navigation** (Screen to Screen)
+
 * tap on a screen
-   * prompt you to another screen
-   
+   * Habit Log -> Congratulations
+ 
 * tap on a label
-   * prompt you to another screen
+   * Sign Up 
+       * Login -> Log In
+       * Sign Up -> Log In
+   * Log In
+       * Log In -> Profile/Mine
+   * Habits
+       * New -> Compose
+       * Navigation Bar -> Task Board
+   * Task Board
+       * Back -> Habits
+       * Show -> Show off
+   * Show off
+       * Back -> Task Board
+       * Profile -> Profile/Mine
+   * Profile/Mine
+       * Habits -> Habits
+       * Logout -> Log In
+       * Mine -> Profile/Friends
+       * Instance of habits -> Habit Log
+   * Profile/Friends
+       * Habits -> Habits
+       * Logout -> Log In
+       * Friends -> Profile/Mine
+       * Instance of friends -> Messages
+   * Messages
+       * Mine -> Profile/Friends
+       * Friend -> Contacts
+   * Compose
+       * Start -> Habit Log
+   * Congratulations
+       * Yeah! -> Compose
+       * Share with friend -> Messages
+   * Contacts
+       * Profile -> Profile/Mine
+       * Instance of chats -> Messages
+
    
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
 <img src="http://g.recordit.co/zNU3nuEUxx.gif" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+Compose             |  Congratulations |  Contacts | Habit Log
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://i.imgur.com/fSaPqB4.png)  |  ![](https://i.imgur.com/d1zScgd.png) | ![](https://i.imgur.com/nVs1jB2.png) | ![](https://i.imgur.com/Xt1iLXd.png)
 
-### [BONUS] Interactive Prototype
+Habits             |  Log In |  Messages | Profile/friends
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://i.imgur.com/bYqBQkn.png)  |  ![](https://i.imgur.com/knHNdxm.png) | ![](https://i.imgur.com/C9vtHY8.png) | ![](https://i.imgur.com/oY7Iamt.png)
+
+Show Off             |  Task Board |  Sign Up | Profile/mine
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://i.imgur.com/UHQHboU.png)  |  ![](https://i.imgur.com/jQBZYdy.png) | ![](https://i.imgur.com/kQikqWh.png) | ![](https://i.imgur.com/a1LRdl6.png)
+
 
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+TBD
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+- Login, logout, share, post
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
