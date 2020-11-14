@@ -14,13 +14,12 @@ Original App Design Project
 This an app to keep track of your habits, and share with your friends. 
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Health & Fitness/Productivity/Graphics & Design/Social Networking/Lifestyle
 - **Mobile:** Faster/Easy acces to camera/Upload & update easily
-- **Story:** 
+- **Story:** Mentor's suggestion
 - **Market:** People who wants to track their habit and make things organized 
 - **Habit:** Maintain a healthy lifestyle/Custom UI design/Share with friends
-- **Scope:** 
+- **Scope:** Young people
 
 ## Product Spec
 
@@ -90,7 +89,6 @@ This an app to keep track of your habits, and share with your friends.
 
 **Flow Navigation** (Screen to Screen)
 
-**Flow Navigation** (Screen to Screen)
 
 * tap on a screen
    * Habit Log -> Congratulations
@@ -135,7 +133,8 @@ This an app to keep track of your habits, and share with your friends.
    
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
+[Overview](https://i.imgur.com/T0N8ukh.png)
+
 <img src="http://g.recordit.co/zNU3nuEUxx.gif" width=600>
 
 Compose             |  Congratulations |  Contacts | Habit Log
