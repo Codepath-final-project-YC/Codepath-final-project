@@ -11,7 +11,7 @@ Original App Design Project
 
 ## Overview
 ### Description
-[Description of your app]
+This an app to keep track of your habits, and share with your friends. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
