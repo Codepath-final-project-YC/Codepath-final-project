@@ -50,6 +50,20 @@ This an app to keep track of your habits, and share with your friends.
 * Login screen
    * enter your email
    * enter your password
+* profile
+   * Check your progress
+   * Check your friends progress
+   * Go to your habits 
+   * Logout
+* habits
+   * start new habit
+   * set a goal
+   * post on feed
+   * show off
+* show off
+   * post your progress
+
+   
 
 ### 3. Navigation
 
