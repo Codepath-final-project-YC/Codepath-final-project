@@ -99,7 +99,7 @@ This an app to keep track of your habits, and share with your friends.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://recordit.co/zNU3nuEUxx" width=600>
+<img src="http://g.recordit.co/zNU3nuEUxx.gif" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
