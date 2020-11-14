@@ -43,28 +43,40 @@ Original App Design Project
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Sign up screen
+   * enter your name
+   * enter your email
+   * enter your password
+* Login screen
+   * enter your email
+   * enter your password
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Sign Up
+* Login
+* profile
+* mine
+* friends
+* habits
+* Start habit
+* Task Board
+* Show off
+* habit
+* congratulations
+* share
+* logout
+
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
+* tap on a screen
+   * prompt you to another screen
    * ...
-* [list second screen here]
-   * [list screen navigation here]
+* tap on a label
+   * prompt you to another screen
    * ...
 
 ## Wireframes
