@@ -74,10 +74,10 @@ Original App Design Project
 
 * tap on a screen
    * prompt you to another screen
-   * ...
+   
 * tap on a label
    * prompt you to another screen
-   * ...
+   
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
