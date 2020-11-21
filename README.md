@@ -152,51 +152,55 @@ Show Off             |  Task Board |  Sign Up | Profile/mine
 
 ## Schema 
 ### Models
-#### Post
+#### Habits
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the user post (default field) |
-   | author        | Pointer to User| image author |
-   | image         | File     | image that user posts |
-   | caption       | String   | image caption by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
-   | likesCount    | Number   | number of likes for the post |
-   | createdAt     | DateTime | date when post is created (default field) |
-   | updatedAt     | DateTime | date when post is last updated (default field) |
+   | objectId      | String   | unique id for the user habit (default field)|
+   | user        | Pointer to User| who create this habit |
+   | caption       | String   | habit caption by user |
+   | createdAt     | DateTime | date when habit is created (default field) |
+   | updatedAt     | DateTime | date when habit is last updated (default field) |
+   | endAt     | DateTime | date when habit is done (default field) |
+| likesCount    | Number   | number of likes for the post |
+| commentsCount | Number   | number of comments that has been posted to an image |
+
 ### Networking
 #### List of network requests by screen
-   - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
-         ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
-            }
-         }
-         ```
-      - (Create/POST) Create a new like on a post
-      - (Delete) Delete existing like
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
-   - Profile Screen
-      - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
+- Sign up screen
+    * (Create/POST) Create a new user password pair
+- Login screen
+   * (Read/GET) Query logged in user's encrypted username and password
+- profile screen
+    * (Read/GET) Query logged in user object
+    * (Update/PUT) Update user profile image, username, password...
+- habits screen
+   *  (Read/GET) Query all habits where user is author
+   * (Update/PUT) Update user habit status
+   * (Create/POST) Create a new habit
+   * (Delete/DELETE) Delete a new habit
+- show off screen
+   * (Read/GET) Query all habits where user is author
+- congratulations screen
+   * (Read/GET) Query current habit status
+
+
 #### [OPTIONAL:] Existing API Endpoints
-##### An API Of Ice And Fire
-- Base URL - [http://www.anapioficeandfire.com/api](http://www.anapioficeandfire.com/api)
+##### APIs for Habit Tracker
+- Base URL - [http://www.habittracker.com]
 
    HTTP Verb | Endpoint | Description
    ----------|----------|------------
-    `GET`    | /characters | get all characters
-    `GET`    | /characters/?name=name | return specific character by name
-    `GET`    | /houses   | get all houses
-    `GET`    | /houses/?name=name | return specific house by name
+    `GET`     | /users | get all users username, habits list, ...
+     `GET`     | /user/:id | get one user's info
+    `GET`    | /habits | get all habits from all users
+    `GET`    | /habit/:id | get all habits from one user
+    `PUT`     | /users | update all users username, habits list, ...
+     `PUT`     | /user/:id | update one user's info
+    `PUT`    | /habits | update all habits from all users
+    `PUT`    | /habit/:id | update all habits from one user    
+     `CREATE`     | /user/:id |  create one user's info
+    `CREATE`    | /habit/:id | create all habits from one user        
+    `DELETE`     | /user/:id | delete one user's info     
+    `DELETE`    | /habit/:id | delete all habits from one user        
+
