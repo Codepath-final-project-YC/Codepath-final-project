@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A999AAA256CA96700E1EA57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A999AA8256CA96700E1EA57 /* Main.storyboard */; };
 		339D07632568A329004342BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07622568A329004342BA /* AppDelegate.swift */; };
 		339D07652568A329004342BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07642568A329004342BA /* SceneDelegate.swift */; };
 		339D07672568A329004342BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07662568A329004342BA /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A999AA9256CA96700E1EA57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Taskboard/Taskboard/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		339D075F2568A329004342BA /* HabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		339D07622568A329004342BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		339D07642568A329004342BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				339D07642568A329004342BA /* SceneDelegate.swift */,
 				339D07662568A329004342BA /* ViewController.swift */,
 				339D07682568A329004342BA /* auth.storyboard */,
+				2A999AA8256CA96700E1EA57 /* Main.storyboard */,
 				339D076B2568A32B004342BA /* Assets.xcassets */,
 				339D076D2568A32B004342BA /* LaunchScreen.storyboard */,
 				339D07702568A32B004342BA /* Info.plist */,
@@ -234,6 +237,7 @@
 				339D076F2568A32B004342BA /* LaunchScreen.storyboard in Resources */,
 				339D076C2568A32B004342BA /* Assets.xcassets in Resources */,
 				339D076A2568A329004342BA /* auth.storyboard in Resources */,
+				2A999AAA256CA96700E1EA57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +300,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2A999AA8256CA96700E1EA57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A999AA9256CA96700E1EA57 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		339D07682568A329004342BA /* auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
