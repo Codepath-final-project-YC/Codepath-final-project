@@ -7,6 +7,28 @@
 
 import UIKit
 
-class HomeViewController: ViewController {
+class HomeViewController: UIViewController {
+    @IBOutlet weak var cate1Button: UIButton!
+    @IBOutlet weak var drawView: drawSketch!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+    @IBAction func drawCate1Button(_ sender: Any) {
+        
+    }
 }
