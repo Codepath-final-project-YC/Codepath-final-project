@@ -27,8 +27,8 @@ This an app to keep track of your habits, and share with your friends.
 
 **Required Must-have Stories**
 
-* User registration
-* Login/Auth
+[x] User registration
+[x] Login/Auth
 * User profile page
 * Overview of all habits
 * Track habits
