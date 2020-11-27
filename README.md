@@ -26,14 +26,15 @@ This an app to keep track of your habits, and share with your friends.
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
+(click to check the gif)
+- [x] [User registration](https://recordit.co/uNjd13cHUo)
+- [x] [Login/Auth](https://recordit.co/KZ3CEGNs6c)
+- [ ] User profile page
+- [ ] Overview of all habits
+- [ ] Track habits
+- [ ] Creat/Delete habit
+- [ ] Share habits with friends 
 
-[x] User registration
-[x] Login/Auth
-* User profile page
-* Overview of all habits
-* Track habits
-* Creat/Delete habit
-* Share habits with friends 
 
 **Optional Nice-to-have Stories**
 
