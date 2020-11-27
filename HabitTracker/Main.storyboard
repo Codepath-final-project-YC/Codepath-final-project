@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O8J-Cq-8DE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T3s-fb-sy7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -167,11 +167,22 @@
                     <connections>
                         <outlet property="cate1Button" destination="SCs-vS-RJV" id="Lhb-g8-ETH"/>
                         <outlet property="drawView" destination="YdH-1q-bTO" id="yfc-No-Czr"/>
+                        <segue destination="LLI-06-ekj" kind="show" identifier="goToCALayerScene" id="XiK-SS-jei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad1-m7-YL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2035" y="116"/>
+        </scene>
+        <!--CALayer-->
+        <scene sceneID="ok9-RV-erI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LayerScene" referencedIdentifier="CALayer" id="LLI-06-ekj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7sM-Ey-Exg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJv-hd-eTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2608" y="116"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="mLO-Ur-Dbn">

@@ -10,6 +10,9 @@
 		3371C037256E163C000BC9B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3371C036256E163C000BC9B4 /* GoogleService-Info.plist */; };
 		3371C067256EE17C000BC9B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371C066256EE17C000BC9B4 /* Constants.swift */; };
 		3371C070256F6441000BC9B4 /* drawSketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371C06F256F6440000BC9B4 /* drawSketch.swift */; };
+		3371C07F256F7437000BC9B4 /* LayerScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3371C07E256F7437000BC9B4 /* LayerScene.storyboard */; };
+		3371C084256F7569000BC9B4 /* CALayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371C083256F7569000BC9B4 /* CALayerViewController.swift */; };
+		3371C089256F7570000BC9B4 /* CALayerControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371C088256F7570000BC9B4 /* CALayerControlsViewController.swift */; };
 		339D07632568A329004342BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07622568A329004342BA /* AppDelegate.swift */; };
 		339D07652568A329004342BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07642568A329004342BA /* SceneDelegate.swift */; };
 		339D07672568A329004342BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07662568A329004342BA /* ViewController.swift */; };
@@ -49,6 +52,9 @@
 		3371C036256E163C000BC9B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3371C066256EE17C000BC9B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3371C06F256F6440000BC9B4 /* drawSketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawSketch.swift; sourceTree = "<group>"; };
+		3371C07E256F7437000BC9B4 /* LayerScene.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LayerScene.storyboard; sourceTree = "<group>"; };
+		3371C083256F7569000BC9B4 /* CALayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerViewController.swift; sourceTree = "<group>"; };
+		3371C088256F7570000BC9B4 /* CALayerControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerControlsViewController.swift; sourceTree = "<group>"; };
 		339D075F2568A329004342BA /* HabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		339D07622568A329004342BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		339D07642568A329004342BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,12 +147,15 @@
 		339D07612568A329004342BA /* HabitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3371C07E256F7437000BC9B4 /* LayerScene.storyboard */,
 				3371C066256EE17C000BC9B4 /* Constants.swift */,
 				33E97C87256E1072007ABD6E /* Utilities.swift */,
 				339D07622568A329004342BA /* AppDelegate.swift */,
 				339D07642568A329004342BA /* SceneDelegate.swift */,
 				33E97C41256DDF98007ABD6E /* View Controllers */,
 				33E97C3C256DDF74007ABD6E /* Main.storyboard */,
+				3371C083256F7569000BC9B4 /* CALayerViewController.swift */,
+				3371C088256F7570000BC9B4 /* CALayerControlsViewController.swift */,
 				339D076B2568A32B004342BA /* Assets.xcassets */,
 				3371C036256E163C000BC9B4 /* GoogleService-Info.plist */,
 				339D07702568A32B004342BA /* Info.plist */,
@@ -305,6 +314,7 @@
 				339D076C2568A32B004342BA /* Assets.xcassets in Resources */,
 				33E97C3D256DDF74007ABD6E /* Main.storyboard in Resources */,
 				3371C037256E163C000BC9B4 /* GoogleService-Info.plist in Resources */,
+				3371C07F256F7437000BC9B4 /* LayerScene.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +448,10 @@
 				33E97C88256E1072007ABD6E /* Utilities.swift in Sources */,
 				33E97C79256E0D64007ABD6E /* SignUpViewController.swift in Sources */,
 				33E97C7E256E0D74007ABD6E /* LoginViewController.swift in Sources */,
+				3371C089256F7570000BC9B4 /* CALayerControlsViewController.swift in Sources */,
 				339D07652568A329004342BA /* SceneDelegate.swift in Sources */,
 				33E97C83256E0D80007ABD6E /* HomeViewController.swift in Sources */,
+				3371C084256F7569000BC9B4 /* CALayerViewController.swift in Sources */,
 				3371C067256EE17C000BC9B4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

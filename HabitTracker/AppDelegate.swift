@@ -8,6 +8,8 @@
 import UIKit
 import Firebase
 
+let swiftOrangeColor = UIColor(red: 248 / 255.0, green: 96 / 255.0, blue: 47 / 255.0, alpha: 1.0)
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
