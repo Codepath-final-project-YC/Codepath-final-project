@@ -21,51 +21,69 @@ extension UIImage {
 
         return UIColor(red: CGFloat(bitmap[0]) / 255, green: CGFloat(bitmap[1]) / 255, blue: CGFloat(bitmap[2]) / 255, alpha: CGFloat(bitmap[3]) / 255)
     }
+    func tint(color: UIColor) -> UIImage {
+        let maskImage = cgImage
+        let bounds = CGRect(origin: .zero, size: size)
+
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { context in
+            let cgContext = context.cgContext
+            cgContext.clip(to: bounds, mask: maskImage!)
+            color.setFill()
+            cgContext.fill(bounds)
+        }
+    }
 }
+
 class TrackHabitViewController: UIViewController {
 
     
-    let layer = CALayer()
+//    let layer = CALayer()
     
     @IBOutlet weak var viewForLayer: UIView!
-    
+    var imgView : UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLayer()
-        viewForLayer.layer.addSublayer(layer)
+//        setupLayer()
+//        viewForLayer.layer.addSublayer(layer)
+        imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+        imgView.contentMode = .scaleAspectFill
+        imgView.image = self.setupLayer()
+            view.addSubview(imgView)
     }
     
-    func setupLayer() {
+    func setupLayer() -> UIImage {
         
-        layer.frame = viewForLayer.bounds
+//        layer.frame = viewForLayer.bounds
 
         let ori_img = UIImage(named: "frog")
         let img = ori_img?.cgImage
   
-        let color = ori_img?.averageColor
-        print("the picked color is: ", color)
+//        let color = ori_img?.averageColor
+//        print("the picked color is: ", color)
 
-        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
-        color!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+//        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+//        color!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+//
+        // select while colors
 //        let colormask : [CGFloat] = [222, 255, 222, 255, 222, 255]
-//        let colormask2 : [CGFloat] = [0, 30, 0, 30, 0, 30]
-        let colormask3 : [CGFloat] = [80, 150, 150, 220, 40, 100]
         
-        print("red", red)
-        print("green", green)
-        print("blue", blue)
-//        let mask = img!.copy(maskingColorComponents: colormask)
-//        let mask2 = img!.copy(maskingColorComponents: colormask2)
-        let mask3 = img!.copy(maskingColorComponents: colormask3)
+        // select green colors
+        let green_mask : [CGFloat] = [0, 30, 0, 30, 0, 30]
         
-        CGContextSetRGBFillColor (myContext, 0.6373,0.6373, 0, 1);
-        CGContextFillRect(context, rect);
-        CGContextDrawImage(context, rect, myColorMaskedImage);
+        // select black colors
+        let black_mask : [CGFloat] = [80, 150, 150, 220, 40, 100]
         
-        layer.contents = mask3
-
-        layer.contentsGravity = .resizeAspect
+        let keep_green_mask = img!.copy(maskingColorComponents: green_mask)
+        
+        
+        let keep_black_mask = img!.copy(maskingColorComponents: black_mask)
+        
+        let new_ui_img = UIImage(cgImage: keep_black_mask!)
+        let final_img = new_ui_img.tint(color: .red)
+        return final_img
+//        layer.contentsGravity = .resizeAspect
 
     }
 
