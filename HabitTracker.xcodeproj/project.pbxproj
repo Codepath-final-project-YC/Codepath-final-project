@@ -19,6 +19,7 @@
 		339D076C2568A32B004342BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339D076B2568A32B004342BA /* Assets.xcassets */; };
 		339D077A2568A32C004342BA /* HabitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07792568A32C004342BA /* HabitTrackerTests.swift */; };
 		339D07852568A32C004342BA /* HabitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07842568A32C004342BA /* HabitTrackerUITests.swift */; };
+		33D958EF25742E5400539432 /* TrackHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D958EE25742E5400539432 /* TrackHabitViewController.swift */; };
 		33E97C3D256DDF74007ABD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E97C3C256DDF74007ABD6E /* Main.storyboard */; };
 		33E97C79256E0D64007ABD6E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E97C78256E0D64007ABD6E /* SignUpViewController.swift */; };
 		33E97C7E256E0D74007ABD6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E97C7D256E0D74007ABD6E /* LoginViewController.swift */; };
@@ -67,6 +68,7 @@
 		339D07802568A32C004342BA /* HabitTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		339D07842568A32C004342BA /* HabitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerUITests.swift; sourceTree = "<group>"; };
 		339D07862568A32C004342BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D958EE25742E5400539432 /* TrackHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHabitViewController.swift; sourceTree = "<group>"; };
 		33E97C3C256DDF74007ABD6E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		33E97C78256E0D64007ABD6E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		33E97C7D256E0D74007ABD6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				33E97C78256E0D64007ABD6E /* SignUpViewController.swift */,
 				33E97C7D256E0D74007ABD6E /* LoginViewController.swift */,
 				33E97C82256E0D80007ABD6E /* HomeViewController.swift */,
+				33D958EE25742E5400539432 /* TrackHabitViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				3371C089256F7570000BC9B4 /* CALayerControlsViewController.swift in Sources */,
 				339D07652568A329004342BA /* SceneDelegate.swift in Sources */,
 				33E97C83256E0D80007ABD6E /* HomeViewController.swift in Sources */,
+				33D958EF25742E5400539432 /* TrackHabitViewController.swift in Sources */,
 				3371C084256F7569000BC9B4 /* CALayerViewController.swift in Sources */,
 				3371C067256EE17C000BC9B4 /* Constants.swift in Sources */,
 			);
