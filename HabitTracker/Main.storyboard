@@ -272,10 +272,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dy-T3-eDa">
-                                <rect key="frame" x="40" y="84" width="334" height="738"/>
+                                <rect key="frame" x="40" y="544" width="334" height="278"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-pR-MiX">
-                                        <rect key="frame" x="20" y="20" width="294" height="698"/>
+                                        <rect key="frame" x="20" y="20" width="294" height="238"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -287,13 +287,21 @@
                                     <constraint firstAttribute="trailing" secondItem="hYx-pR-MiX" secondAttribute="trailing" constant="20" id="vxA-bP-KHp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2t-f8-qWI">
+                                <rect key="frame" x="179" y="130" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Running"/>
+                                <connections>
+                                    <action selector="habitLoggedButtonClick:" destination="mmy-Vs-aVX" eventType="touchUpInside" id="eJ6-L0-dha"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ag0-CU-xQa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7dy-T3-eDa" firstAttribute="leading" secondItem="Ag0-CU-xQa" secondAttribute="leading" constant="40" id="ABo-hi-Arb"/>
                             <constraint firstItem="Ag0-CU-xQa" firstAttribute="trailing" secondItem="7dy-T3-eDa" secondAttribute="trailing" constant="40" id="Ckc-Ly-Ls6"/>
-                            <constraint firstItem="7dy-T3-eDa" firstAttribute="top" secondItem="Ag0-CU-xQa" secondAttribute="top" constant="40" id="XD8-HM-Eg2"/>
+                            <constraint firstItem="7dy-T3-eDa" firstAttribute="top" secondItem="Ag0-CU-xQa" secondAttribute="top" constant="500" id="XD8-HM-Eg2"/>
                             <constraint firstItem="Ag0-CU-xQa" firstAttribute="bottom" secondItem="7dy-T3-eDa" secondAttribute="bottom" constant="40" id="fVD-WQ-BKv"/>
                         </constraints>
                     </view>
