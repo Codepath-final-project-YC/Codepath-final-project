@@ -47,25 +47,18 @@ class TrackHabitViewController: UIViewController {
         super.viewDidLoad()
 //        setupLayer()
 //        viewForLayer.layer.addSublayer(layer)
-        imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+        let myframe = CGRect(x: 0, y: 0, width: 300, height: 200)
+        imgView = UIImageView(frame: myframe)
         imgView.contentMode = .scaleAspectFill
-        imgView.image = self.setupLayer()
+        imgView.image = self.paintImage(color: .red)
             view.addSubview(imgView)
     }
     
-    func setupLayer() -> UIImage {
+    func paintImage(color: UIColor) -> UIImage {
         
-//        layer.frame = viewForLayer.bounds
-
         let ori_img = UIImage(named: "frog")
         let img = ori_img?.cgImage
   
-//        let color = ori_img?.averageColor
-//        print("the picked color is: ", color)
-
-//        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
-//        color!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-//
         // select while colors
 //        let colormask : [CGFloat] = [222, 255, 222, 255, 222, 255]
         
@@ -77,11 +70,12 @@ class TrackHabitViewController: UIViewController {
         
         let keep_green_mask = img!.copy(maskingColorComponents: green_mask)
         
-        
+//        let remove_green_mask = CGContext.clip(to rect: rect, mask: keep_green_mask)
+                
         let keep_black_mask = img!.copy(maskingColorComponents: black_mask)
         
         let new_ui_img = UIImage(cgImage: keep_black_mask!)
-        let final_img = new_ui_img.tint(color: .red)
+        let final_img = new_ui_img.tint(color: color)
         return final_img
 //        layer.contentsGravity = .resizeAspect
 
