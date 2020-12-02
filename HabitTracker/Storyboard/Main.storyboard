@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mmy-Vs-aVX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O8J-Cq-8DE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -143,17 +143,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-1q-bTO" customClass="drawSketch" customModule="HabitTracker" customModuleProvider="target">
-                                <rect key="frame" x="40" y="373" width="334" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCs-vS-RJV">
                                 <rect key="frame" x="185" y="684" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Health"/>
                                 <connections>
                                     <action selector="drawCate1Button:" destination="O8J-Cq-8DE" eventType="touchUpInside" id="haz-HV-hes"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvF-ah-4zk">
+                                <rect key="frame" x="165" y="198" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ToStartHabit"/>
+                                <connections>
+                                    <action selector="ToStartHabitButton:" destination="O8J-Cq-8DE" eventType="touchUpInside" id="xFc-WO-Qzt"/>
+                                    <segue destination="Wjd-2G-MT7" kind="show" identifier="goToComposeVC" id="1oX-ef-SIk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VF-7a-SVi">
+                                <rect key="frame" x="171" y="321" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TrackHabit"/>
+                                <connections>
+                                    <action selector="trackHabitButton:" destination="O8J-Cq-8DE" eventType="touchUpInside" id="CrB-X1-Ah6"/>
+                                    <segue destination="hML-O9-0LX" kind="show" identifier="goToTrackHabitVC" id="wcU-mJ-cBP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3g-ha-tBk">
+                                <rect key="frame" x="163" y="448" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AnalyzeHabit"/>
+                                <connections>
+                                    <action selector="AnalyzeHabitButton:" destination="O8J-Cq-8DE" eventType="touchUpInside" id="ovV-4l-ygG"/>
+                                    <segue destination="M5g-og-eUr" kind="show" identifier="goToAnalyzeHabit" id="3BJ-Sf-LjX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -166,13 +188,32 @@
                     </view>
                     <connections>
                         <outlet property="cate1Button" destination="SCs-vS-RJV" id="Lhb-g8-ETH"/>
-                        <outlet property="drawView" destination="YdH-1q-bTO" id="yfc-No-Czr"/>
                         <segue destination="LLI-06-ekj" kind="show" identifier="goToCALayerScene" id="XiK-SS-jei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad1-m7-YL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="116"/>
+            <point key="canvasLocation" x="2034.7826086956522" y="115.84821428571428"/>
+        </scene>
+        <!--TrackHabitVC-->
+        <scene sceneID="X1g-Hc-NdF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrackHabit" referencedIdentifier="TrackHabitVC" id="hML-O9-0LX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rf0-WA-n2v"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cx-kh-OVW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="167"/>
+        </scene>
+        <!--ComposeVC-->
+        <scene sceneID="Uet-ab-dVg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Compose" referencedIdentifier="ComposeVC" id="Wjd-2G-MT7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="N2b-Xg-6zR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYI-Vg-m32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655" y="102"/>
         </scene>
         <!--CALayer-->
         <scene sceneID="ok9-RV-erI">
@@ -182,7 +223,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJv-hd-eTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2608" y="116"/>
+            <point key="canvasLocation" x="2638" y="234"/>
+        </scene>
+        <!--AnalyzeHabitVC-->
+        <scene sceneID="hgx-e7-Y5n">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnalyzeHabit" referencedIdentifier="AnalyzeHabitVC" id="M5g-og-eUr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fBL-Rl-vkH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mz9-WE-cJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2672" y="301"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="mLO-Ur-Dbn">
@@ -262,56 +313,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNr-6q-Efr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1275" y="-189"/>
-        </scene>
-        <!--Track Habit View Controller-->
-        <scene sceneID="v1Y-EJ-ODY">
-            <objects>
-                <viewController id="mmy-Vs-aVX" customClass="TrackHabitViewController" customModule="HabitTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qGV-FN-Rsk" customClass="trac">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dy-T3-eDa">
-                                <rect key="frame" x="40" y="544" width="334" height="278"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-pR-MiX">
-                                        <rect key="frame" x="20" y="20" width="294" height="238"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="hYx-pR-MiX" firstAttribute="top" secondItem="7dy-T3-eDa" secondAttribute="top" constant="20" id="5qI-g6-x9G"/>
-                                    <constraint firstItem="hYx-pR-MiX" firstAttribute="leading" secondItem="7dy-T3-eDa" secondAttribute="leading" constant="20" id="KLr-Bc-ac0"/>
-                                    <constraint firstAttribute="bottom" secondItem="hYx-pR-MiX" secondAttribute="bottom" constant="20" id="dbu-1z-MyE"/>
-                                    <constraint firstAttribute="trailing" secondItem="hYx-pR-MiX" secondAttribute="trailing" constant="20" id="vxA-bP-KHp"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2t-f8-qWI">
-                                <rect key="frame" x="179" y="130" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Running"/>
-                                <connections>
-                                    <action selector="habitLoggedButtonClick:" destination="mmy-Vs-aVX" eventType="touchUpInside" id="eJ6-L0-dha"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ag0-CU-xQa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="7dy-T3-eDa" firstAttribute="leading" secondItem="Ag0-CU-xQa" secondAttribute="leading" constant="40" id="ABo-hi-Arb"/>
-                            <constraint firstItem="Ag0-CU-xQa" firstAttribute="trailing" secondItem="7dy-T3-eDa" secondAttribute="trailing" constant="40" id="Ckc-Ly-Ls6"/>
-                            <constraint firstItem="7dy-T3-eDa" firstAttribute="top" secondItem="Ag0-CU-xQa" secondAttribute="top" constant="500" id="XD8-HM-Eg2"/>
-                            <constraint firstItem="Ag0-CU-xQa" firstAttribute="bottom" secondItem="7dy-T3-eDa" secondAttribute="bottom" constant="40" id="fVD-WQ-BKv"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="viewForLayer" destination="hYx-pR-MiX" id="5iP-KT-iFp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6au-qg-IZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2074" y="-618"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bc5-CJ-xa2">

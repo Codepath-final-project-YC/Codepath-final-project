@@ -20,6 +20,11 @@
 		339D077A2568A32C004342BA /* HabitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07792568A32C004342BA /* HabitTrackerTests.swift */; };
 		339D07852568A32C004342BA /* HabitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D07842568A32C004342BA /* HabitTrackerUITests.swift */; };
 		33D958EF25742E5400539432 /* TrackHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D958EE25742E5400539432 /* TrackHabitViewController.swift */; };
+		33D959332577199000539432 /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D959322577199000539432 /* Compose.storyboard */; };
+		33D9593E25771A1A00539432 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D9593D25771A1A00539432 /* ComposeViewController.swift */; };
+		33D9594325771D1400539432 /* TrackHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D9594225771D1400539432 /* TrackHabit.storyboard */; };
+		33D9594B25774E8300539432 /* AnalyzeHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D9594A25774E8300539432 /* AnalyzeHabit.storyboard */; };
+		33D9595025774F0100539432 /* AnalyzeHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D9594F25774F0100539432 /* AnalyzeHabitViewController.swift */; };
 		33E97C3D256DDF74007ABD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E97C3C256DDF74007ABD6E /* Main.storyboard */; };
 		33E97C79256E0D64007ABD6E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E97C78256E0D64007ABD6E /* SignUpViewController.swift */; };
 		33E97C7E256E0D74007ABD6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E97C7D256E0D74007ABD6E /* LoginViewController.swift */; };
@@ -69,6 +74,11 @@
 		339D07842568A32C004342BA /* HabitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerUITests.swift; sourceTree = "<group>"; };
 		339D07862568A32C004342BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33D958EE25742E5400539432 /* TrackHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHabitViewController.swift; sourceTree = "<group>"; };
+		33D959322577199000539432 /* Compose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
+		33D9593D25771A1A00539432 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		33D9594225771D1400539432 /* TrackHabit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackHabit.storyboard; sourceTree = "<group>"; };
+		33D9594A25774E8300539432 /* AnalyzeHabit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnalyzeHabit.storyboard; sourceTree = "<group>"; };
+		33D9594F25774F0100539432 /* AnalyzeHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeHabitViewController.swift; sourceTree = "<group>"; };
 		33E97C3C256DDF74007ABD6E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		33E97C78256E0D64007ABD6E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		33E97C7D256E0D74007ABD6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -149,13 +159,12 @@
 		339D07612568A329004342BA /* HabitTracker */ = {
 			isa = PBXGroup;
 			children = (
-				3371C07E256F7437000BC9B4 /* LayerScene.storyboard */,
+				33D959132576E10E00539432 /* Storyboard */,
 				3371C066256EE17C000BC9B4 /* Constants.swift */,
 				33E97C87256E1072007ABD6E /* Utilities.swift */,
 				339D07622568A329004342BA /* AppDelegate.swift */,
 				339D07642568A329004342BA /* SceneDelegate.swift */,
 				33E97C41256DDF98007ABD6E /* View Controllers */,
-				33E97C3C256DDF74007ABD6E /* Main.storyboard */,
 				3371C083256F7569000BC9B4 /* CALayerViewController.swift */,
 				3371C088256F7570000BC9B4 /* CALayerControlsViewController.swift */,
 				339D076B2568A32B004342BA /* Assets.xcassets */,
@@ -184,6 +193,18 @@
 			path = HabitTrackerUITests;
 			sourceTree = "<group>";
 		};
+		33D959132576E10E00539432 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3371C07E256F7437000BC9B4 /* LayerScene.storyboard */,
+				33D959322577199000539432 /* Compose.storyboard */,
+				33D9594225771D1400539432 /* TrackHabit.storyboard */,
+				33D9594A25774E8300539432 /* AnalyzeHabit.storyboard */,
+				33E97C3C256DDF74007ABD6E /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		33E97C41256DDF98007ABD6E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +213,8 @@
 				33E97C7D256E0D74007ABD6E /* LoginViewController.swift */,
 				33E97C82256E0D80007ABD6E /* HomeViewController.swift */,
 				33D958EE25742E5400539432 /* TrackHabitViewController.swift */,
+				33D9593D25771A1A00539432 /* ComposeViewController.swift */,
+				33D9594F25774F0100539432 /* AnalyzeHabitViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -315,9 +338,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				339D076C2568A32B004342BA /* Assets.xcassets in Resources */,
+				33D959332577199000539432 /* Compose.storyboard in Resources */,
 				33E97C3D256DDF74007ABD6E /* Main.storyboard in Resources */,
 				3371C037256E163C000BC9B4 /* GoogleService-Info.plist in Resources */,
+				33D9594B25774E8300539432 /* AnalyzeHabit.storyboard in Resources */,
 				3371C07F256F7437000BC9B4 /* LayerScene.storyboard in Resources */,
+				33D9594325771D1400539432 /* TrackHabit.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,11 +471,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D9595025774F0100539432 /* AnalyzeHabitViewController.swift in Sources */,
 				3371C070256F6441000BC9B4 /* drawSketch.swift in Sources */,
 				339D07672568A329004342BA /* ViewController.swift in Sources */,
 				339D07632568A329004342BA /* AppDelegate.swift in Sources */,
 				33E97C88256E1072007ABD6E /* Utilities.swift in Sources */,
 				33E97C79256E0D64007ABD6E /* SignUpViewController.swift in Sources */,
+				33D9593E25771A1A00539432 /* ComposeViewController.swift in Sources */,
 				33E97C7E256E0D74007ABD6E /* LoginViewController.swift in Sources */,
 				3371C089256F7570000BC9B4 /* CALayerControlsViewController.swift in Sources */,
 				339D07652568A329004342BA /* SceneDelegate.swift in Sources */,

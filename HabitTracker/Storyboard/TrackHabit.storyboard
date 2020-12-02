@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Track Habit View Controller-->
+        <scene sceneID="Qzc-qf-QP1">
+            <objects>
+                <viewController storyboardIdentifier="TrackHabitVC" id="BxU-ff-x94" customClass="TrackHabitViewController" customModule="HabitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZyB-pa-AS9" customClass="trac">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAc-Th-tpY">
+                                <rect key="frame" x="40" y="544" width="334" height="278"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-ES-4IA">
+                                        <rect key="frame" x="20" y="20" width="294" height="238"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ffE-ES-4IA" secondAttribute="bottom" constant="20" id="TIr-d8-Muk"/>
+                                    <constraint firstAttribute="trailing" secondItem="ffE-ES-4IA" secondAttribute="trailing" constant="20" id="cUj-nQ-mNC"/>
+                                    <constraint firstItem="ffE-ES-4IA" firstAttribute="top" secondItem="PAc-Th-tpY" secondAttribute="top" constant="20" id="vE8-Ql-8gJ"/>
+                                    <constraint firstItem="ffE-ES-4IA" firstAttribute="leading" secondItem="PAc-Th-tpY" secondAttribute="leading" constant="20" id="zHW-5a-Cm1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHj-l5-g3q">
+                                <rect key="frame" x="179" y="130" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Running"/>
+                                <connections>
+                                    <action selector="habitLoggedButtonClick:" destination="BxU-ff-x94" eventType="touchUpInside" id="scO-P6-OrN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SfP-cV-kZi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SfP-cV-kZi" firstAttribute="bottom" secondItem="PAc-Th-tpY" secondAttribute="bottom" constant="40" id="Pkb-f5-odL"/>
+                            <constraint firstItem="SfP-cV-kZi" firstAttribute="trailing" secondItem="PAc-Th-tpY" secondAttribute="trailing" constant="40" id="gNe-XW-sSu"/>
+                            <constraint firstItem="PAc-Th-tpY" firstAttribute="leading" secondItem="SfP-cV-kZi" secondAttribute="leading" constant="40" id="vq4-Bn-Nad"/>
+                            <constraint firstItem="PAc-Th-tpY" firstAttribute="top" secondItem="SfP-cV-kZi" secondAttribute="top" constant="500" id="yka-33-9Eu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewForLayer" destination="ffE-ES-4IA" id="eag-cK-2Xj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqm-rM-laU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2074" y="-618"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
