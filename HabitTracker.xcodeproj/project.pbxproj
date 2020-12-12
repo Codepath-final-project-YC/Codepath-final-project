@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3334559F258011F4008D0CF4 /* NormalTrackHabit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3334559E258011F4008D0CF4 /* NormalTrackHabit.storyboard */; };
+		333455A42580120B008D0CF4 /* NormalTrackHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333455A32580120B008D0CF4 /* NormalTrackHabitViewController.swift */; };
+		333455AC25803B15008D0CF4 /* SpecialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333455AB25803B15008D0CF4 /* SpecialButton.swift */; };
+		333455BE25805466008D0CF4 /* UITrackHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333455BD25805466008D0CF4 /* UITrackHabit.swift */; };
 		3371C037256E163C000BC9B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3371C036256E163C000BC9B4 /* GoogleService-Info.plist */; };
 		3371C067256EE17C000BC9B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371C066256EE17C000BC9B4 /* Constants.swift */; };
 		3371C070256F6441000BC9B4 /* drawSketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371C06F256F6440000BC9B4 /* drawSketch.swift */; };
@@ -55,6 +59,10 @@
 /* Begin PBXFileReference section */
 		10C4EE132B93476AA4EE0A00 /* Pods-HabitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-HabitTrackerTests/Pods-HabitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		25DFD7690136E368B69AE288 /* Pods_HabitTracker_HabitTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabitTracker_HabitTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3334559E258011F4008D0CF4 /* NormalTrackHabit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NormalTrackHabit.storyboard; sourceTree = "<group>"; };
+		333455A32580120B008D0CF4 /* NormalTrackHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTrackHabitViewController.swift; sourceTree = "<group>"; };
+		333455AB25803B15008D0CF4 /* SpecialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialButton.swift; sourceTree = "<group>"; };
+		333455BD25805466008D0CF4 /* UITrackHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITrackHabit.swift; sourceTree = "<group>"; };
 		3371C036256E163C000BC9B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3371C066256EE17C000BC9B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3371C06F256F6440000BC9B4 /* drawSketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawSketch.swift; sourceTree = "<group>"; };
@@ -164,6 +172,8 @@
 				33E97C87256E1072007ABD6E /* Utilities.swift */,
 				339D07622568A329004342BA /* AppDelegate.swift */,
 				339D07642568A329004342BA /* SceneDelegate.swift */,
+				333455AB25803B15008D0CF4 /* SpecialButton.swift */,
+				333455BD25805466008D0CF4 /* UITrackHabit.swift */,
 				33E97C41256DDF98007ABD6E /* View Controllers */,
 				3371C083256F7569000BC9B4 /* CALayerViewController.swift */,
 				3371C088256F7570000BC9B4 /* CALayerControlsViewController.swift */,
@@ -199,6 +209,7 @@
 				3371C07E256F7437000BC9B4 /* LayerScene.storyboard */,
 				33D959322577199000539432 /* Compose.storyboard */,
 				33D9594225771D1400539432 /* TrackHabit.storyboard */,
+				3334559E258011F4008D0CF4 /* NormalTrackHabit.storyboard */,
 				33D9594A25774E8300539432 /* AnalyzeHabit.storyboard */,
 				33E97C3C256DDF74007ABD6E /* Main.storyboard */,
 			);
@@ -213,6 +224,7 @@
 				33E97C7D256E0D74007ABD6E /* LoginViewController.swift */,
 				33E97C82256E0D80007ABD6E /* HomeViewController.swift */,
 				33D958EE25742E5400539432 /* TrackHabitViewController.swift */,
+				333455A32580120B008D0CF4 /* NormalTrackHabitViewController.swift */,
 				33D9593D25771A1A00539432 /* ComposeViewController.swift */,
 				33D9594F25774F0100539432 /* AnalyzeHabitViewController.swift */,
 			);
@@ -337,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3334559F258011F4008D0CF4 /* NormalTrackHabit.storyboard in Resources */,
 				339D076C2568A32B004342BA /* Assets.xcassets in Resources */,
 				33D959332577199000539432 /* Compose.storyboard in Resources */,
 				33E97C3D256DDF74007ABD6E /* Main.storyboard in Resources */,
@@ -478,10 +491,13 @@
 				33E97C88256E1072007ABD6E /* Utilities.swift in Sources */,
 				33E97C79256E0D64007ABD6E /* SignUpViewController.swift in Sources */,
 				33D9593E25771A1A00539432 /* ComposeViewController.swift in Sources */,
+				333455A42580120B008D0CF4 /* NormalTrackHabitViewController.swift in Sources */,
 				33E97C7E256E0D74007ABD6E /* LoginViewController.swift in Sources */,
 				3371C089256F7570000BC9B4 /* CALayerControlsViewController.swift in Sources */,
 				339D07652568A329004342BA /* SceneDelegate.swift in Sources */,
+				333455AC25803B15008D0CF4 /* SpecialButton.swift in Sources */,
 				33E97C83256E0D80007ABD6E /* HomeViewController.swift in Sources */,
+				333455BE25805466008D0CF4 /* UITrackHabit.swift in Sources */,
 				33D958EF25742E5400539432 /* TrackHabitViewController.swift in Sources */,
 				3371C084256F7569000BC9B4 /* CALayerViewController.swift in Sources */,
 				3371C067256EE17C000BC9B4 /* Constants.swift in Sources */,

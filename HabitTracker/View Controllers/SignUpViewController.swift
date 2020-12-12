@@ -9,8 +9,14 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+struct CurrentUser {
+   static var userId: String=""
+}
+
 
 class SignUpViewController: UIViewController {
+    
+
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -101,12 +107,15 @@ class SignUpViewController: UIViewController {
                 else {
                     // User was created successfully. Now store the information
                     let db = Firestore.firestore()
-                    
+
                     db.collection("users").addDocument(data: ["firstname": firstName, "lastname": lastName, "uid": result!.user.uid]) { (err) in
                         if err != nil{
                             self.showError("Error when saving info in database")
                         }
                     }
+
+                    
+                    CurrentUser.userId = result!.user.uid
                     
                 // Transition to the home screen
                     self.transitionToHome()

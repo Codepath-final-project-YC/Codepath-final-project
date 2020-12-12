@@ -65,6 +65,8 @@ class LoginViewController: UIViewController {
                 self.transitionToHome()
             }
         }
+        
+
     }
     
 }

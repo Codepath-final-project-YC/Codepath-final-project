@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="2034.7826086956522" y="115.84821428571428"/>
         </scene>
-        <!--TrackHabitVC-->
+        <!--NormalTrackHabitVC-->
         <scene sceneID="X1g-Hc-NdF">
             <objects>
-                <viewControllerPlaceholder storyboardName="TrackHabit" referencedIdentifier="TrackHabitVC" id="hML-O9-0LX" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NormalTrackHabit" referencedIdentifier="NormalTrackHabitVC" id="hML-O9-0LX" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rf0-WA-n2v"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cx-kh-OVW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

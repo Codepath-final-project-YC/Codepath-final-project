@@ -19,20 +19,20 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToCALayerScene" {
-            guard let vc1 = segue.destination as? CALayerViewController else { return }
+            guard segue.destination is CALayerViewController else { return }
 
         }
         if segue.identifier == "goToComposeVC" {
-            guard let vc2 = segue.destination as? ComposeViewController else { return }
+            guard segue.destination is ComposeViewController else { return }
 
         }
         
         if segue.identifier == "goToTrackHabitVC" {
-            guard let vc3 = segue.destination as? TrackHabitViewController else { return }
+            guard segue.destination is NormalTrackHabitViewController else { return }
 
         }
         if segue.identifier == "goToAnalyzeHabit" {
-            guard let vc4 = segue.destination as? AnalyzeHabitViewController else { return }
+            guard segue.destination is AnalyzeHabitViewController else { return }
 
         }
     }
