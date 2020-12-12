@@ -17,9 +17,20 @@ class NormalTrackHabitViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TrackToCompose" {
+            guard segue.destination is ComposeViewController else { return }
 
-    @IBSegueAction func CustomUIAction(_ coder: NSCoder) -> UIViewController? {
+        }
+    
+    }
+
+    
+    @IBSegueAction func toCustomUI(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: UITrackHabit())
     }
+    @IBAction func toCompose(_ sender: Any) {
+        performSegue(withIdentifier: "TrackToCompose", sender: self)
+    }
+    
 }

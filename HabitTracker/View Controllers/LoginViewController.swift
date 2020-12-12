@@ -23,7 +23,12 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpElements()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToTrackHabitVC" {
+            guard segue.destination is NormalTrackHabitViewController else { return }
+
+        }
+    }
     func setUpElements()  {
         // Hide the error label
         errorLabel.alpha = 0
@@ -39,11 +44,11 @@ class LoginViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    func transitionToHome()  {
-        let homeViewController = storyboard?.instantiateViewController(identifier:Constants.Storyboard.homeViewController) as? HomeViewController
+    func transitionToTrack()  {
+        let trackViewController = storyboard?.instantiateViewController(identifier:"NormalTrackHabitVC") as? NormalTrackHabitViewController
         
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = trackViewController
         view.window?.makeKeyAndVisible()
         
         
@@ -62,7 +67,7 @@ class LoginViewController: UIViewController {
                 self.showError("Error in signing in")
             }
             else {
-                self.transitionToHome()
+                self.performSegue(withIdentifier: "goToTrackHabitVC", sender: self)
             }
         }
         

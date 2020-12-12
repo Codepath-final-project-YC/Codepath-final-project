@@ -70,7 +70,15 @@ class ComposeViewController: UIViewController {
 
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        
+        if segue.identifier == "composeToTrack" {
+            guard segue.destination is NormalTrackHabitViewController else { return }
+
+        }
+
+    }
     func setColorButtons(){
         
         
@@ -111,9 +119,10 @@ class ComposeViewController: UIViewController {
         let db = Firestore.firestore()
         // Do any additional setup after loading the view.
         let newDocument = db.collection("habits").document(userId).collection("habit").document()
-
-        newDocument.setData(["name": name, "description": description, "category": cate, "color": cateColor, "startDate": startDate, "datesOfThatWeek":  datesOfThatWeek, "finishedDates": finishedDates, "active": true])
+        let habitID = newDocument.documentID as? String
+        newDocument.setData(["habitID": habitID, "name": name, "description": description, "category": cate, "color": cateColor, "startDate": startDate, "datesOfThatWeek":  datesOfThatWeek, "finishedDates": finishedDates, "active": true])
         
+        performSegue(withIdentifier: "composeToTrack", sender: self)
     }
     
     

@@ -32,6 +32,16 @@ class SignUpViewController: UIViewController {
         setUpElements()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToComposeVC" {
+            guard segue.destination is ComposeViewController else { return }
+
+        }
+        
+    }
+    
+    
     func setUpElements()  {
         
         // Hide the error label
@@ -73,11 +83,11 @@ class SignUpViewController: UIViewController {
     }
     
     
-    func transitionToHome()  {
-        let homeViewController = storyboard?.instantiateViewController(identifier:Constants.Storyboard.homeViewController) as? HomeViewController
+    func transitionToCompose()  {
+        let composeViewController = storyboard?.instantiateViewController(identifier: "ComposeVC") as? ComposeViewController
         
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = composeViewController
         view.window?.makeKeyAndVisible()
         
         
@@ -117,8 +127,8 @@ class SignUpViewController: UIViewController {
                     
                     CurrentUser.userId = result!.user.uid
                     
-                // Transition to the home screen
-                    self.transitionToHome()
+                // Transition to the compose screen
+                    self.performSegue(withIdentifier: "goToComposeVC", sender: self)
                     
                 }
                 

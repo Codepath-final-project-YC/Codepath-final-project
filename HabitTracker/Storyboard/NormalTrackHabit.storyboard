@@ -16,22 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5P-EW-yBX">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8N-j7-tcr">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="c5T-dE-Jy5"/>
+                                    <constraint firstAttribute="height" constant="50" id="xxj-t8-yPy"/>
+                                </constraints>
+                                <state key="normal" title="Track your habits!"/>
                                 <connections>
-                                    <segue destination="NFJ-9w-7V6" kind="show" destinationCreationSelector="CustomUIAction:" id="GL2-vK-dH0"/>
+                                    <segue destination="NFJ-9w-7V6" kind="show" destinationCreationSelector="toCustomUI:" id="qfb-lS-B3T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owN-GJ-SfR">
+                                <rect key="frame" x="136" y="290" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Compose your habit!"/>
+                                <connections>
+                                    <action selector="toCompose:" destination="k96-oU-LAv" eventType="touchUpInside" id="TIc-1z-YwP"/>
+                                    <segue destination="SDU-NZ-fma" kind="show" identifier="TrackToCompose" id="zQQ-3N-c6v"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wiI-Sh-w0Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x8N-j7-tcr" firstAttribute="centerY" secondItem="xsm-cx-ofT" secondAttribute="centerY" id="NrM-xA-Ggv"/>
+                            <constraint firstItem="x8N-j7-tcr" firstAttribute="centerX" secondItem="xsm-cx-ofT" secondAttribute="centerX" id="cBw-UJ-uNT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEg-C9-wZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="163"/>
+            <point key="canvasLocation" x="442.02898550724643" y="162.72321428571428"/>
+        </scene>
+        <!--ComposeVC-->
+        <scene sceneID="4y8-lO-HpG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Compose" referencedIdentifier="ComposeVC" id="SDU-NZ-fma" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tIc-9g-3c9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1WV-vc-3Lr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="-265"/>
         </scene>
         <!--Hosting Controller-->
         <scene sceneID="KlW-g1-EfK">
@@ -41,7 +67,7 @@
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2I4-ez-YAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="163"/>
+            <point key="canvasLocation" x="1173.913043478261" y="162.72321428571428"/>
         </scene>
     </scenes>
     <resources>

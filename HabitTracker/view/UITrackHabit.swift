@@ -12,15 +12,17 @@ struct UITrackHabit: View {
     @ObservedObject private var viewModel = HabitsViewModel()
     
     let colorPalettes: [Color] = [Color("CarnationPink"), Color("Mantis"), Color("UranianBlue"), Color("PeachCrayola"), Color("EnglishRed"), Color("MaizeCrayola"), Color("RoyalBlueLight"), Color("OrangeWeb"), Color("Rhythm"), Color("OrangePantone"),  Color("BGColor")]
-    
+
+
     var body: some View {
         
         VStack(alignment: .center, spacing: 40) {
             ForEach(viewModel.habits) {
                 habit in
                 Button(action: {
-                        print("Hello Function 2")
+                    habit.updateData()
                 }, label: {
+                    
                     SpecialButton(buttonText: habit.name, buttonColor: colorPalettes[habit.color], buttonPercentage: Double(habit.percentage))})
             }
         }.onAppear(){

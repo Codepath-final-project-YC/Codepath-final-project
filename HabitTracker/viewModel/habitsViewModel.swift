@@ -14,6 +14,8 @@ class HabitsViewModel: ObservableObject {
     
     private var db = Firestore.firestore()
     
+
+    
     func fetchData() {
         
         let user = Auth.auth().currentUser
@@ -30,6 +32,7 @@ class HabitsViewModel: ObservableObject {
             self.habits = documents.map { (QueryDocumentSnapshot) -> Habit in
                 let data = QueryDocumentSnapshot.data()
                 
+                let uid = data["habitID"] as? String ?? ""
                 let name = data["name"] as? String ?? ""
                 let description = data["description"] as? String ?? ""
                 let category = data["category"] as? String ?? ""
@@ -39,9 +42,9 @@ class HabitsViewModel: ObservableObject {
                 let finishedDates = data["finishedDates"] as? [String] ?? [""]
                 let active = data["active"] as? Bool ?? false
                 
-                let percentage = finishedDates.count / datesOfThatWeek.count
+                let percentage = Double( finishedDates.count) / Double(datesOfThatWeek.count )
                 
-                return Habit(name: name, category: category, color: color, percentage:percentage, active: active)
+                return Habit(id: uid, name: name, category: category, color: color, percentage: percentage, active: active)
             }
         }
         
