@@ -13,7 +13,6 @@ struct UITrackHabit: View {
     
     let colorPalettes: [Color] = [Color("CarnationPink"), Color("Mantis"), Color("UranianBlue"), Color("PeachCrayola"), Color("EnglishRed"), Color("MaizeCrayola"), Color("RoyalBlueLight"), Color("OrangeWeb"), Color("Rhythm"), Color("OrangePantone"),  Color("BGColor")]
 
-
     var body: some View {
         
         VStack(alignment: .center, spacing: 40) {
