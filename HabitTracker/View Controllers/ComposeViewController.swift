@@ -8,14 +8,36 @@
 import UIKit
 import Firebase
 import SwiftUI
+import KMPlaceholderTextView
+extension Date {
+    var dayAfter: Date {
+        return Calendar.current.date(byAdding: .day, value: 1, to: self)!
+    }
 
+    var dayBefore: Date {
+        return Calendar.current.date(byAdding: .day, value: -1, to: self)!
+    }
+}
 class ComposeViewController: UIViewController {
     var cate:String = ""
     var daysToTrack: [Bool] = [false, false, false, false, false, false, false]
+    var cateColor:Int = 10
+    var datesOfThatWeek: [String] = []
+    
+    var weekTotal = 0
+    
+    
     let colorPalettes: [Color] = [Color("CarnationPink"), Color("Mantis"), Color("UranianBlue"), Color("PeachCrayola"), Color("EnglishRed"), Color("MaizeCrayola"), Color("RoyalBlueLight"), Color("OrangeWeb"), Color("Rhythm"), Color("OrangePantone") ]
     
+    
+    
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    
+
+    @IBOutlet weak var descriptionTextView: KMPlaceholderTextView!
+    
+    
+    
     @IBOutlet weak var cateSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var SundayButton: UIButton!
@@ -45,13 +67,14 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorButtons()
+
         
     }
-    
 
     func setColorButtons(){
         
-        colorLabel.backgroundColor = UIColor(Color("BGColor"))
+        
+        nameTextField.backgroundColor = UIColor(Color("BGColor"))
         
         Color0Button.tintColor = UIColor(colorPalettes[0])
         Color1Button.tintColor = UIColor(colorPalettes[1])
@@ -64,14 +87,21 @@ class ComposeViewController: UIViewController {
         Color8Button.tintColor = UIColor(colorPalettes[8])
         Color9Button.tintColor = UIColor(colorPalettes[9])
 
+        nameTextField.layer.cornerRadius = 10
+
+        descriptionTextView.layer.cornerRadius = 10
+        descriptionTextView.layer.borderWidth = 2
+        descriptionTextView.layer.borderColor = UIColor(Color("BGColor")).cgColor
+        descriptionTextView.textColor = UIColor.darkGray
+
     }
     
     
     @IBAction func composeButtonOnClicked(_ sender: Any) {
         let name = nameTextField.text
-        let description = descriptionTextField.text
+        let description = descriptionTextView.text
         let startDate = addDate()
-            
+        let finishedDates: [String] = []
         let user = Auth.auth().currentUser
         var userId:String = "0CcchhusZAbmIt3rfyp0IkTlv923"
         if let user = user {
@@ -82,21 +112,34 @@ class ComposeViewController: UIViewController {
         // Do any additional setup after loading the view.
         let newDocument = db.collection("habits").document(userId).collection("habit").document()
 
-        newDocument.setData(["name": name, "description": description, "category": cate, "startDate": startDate, "daysToTrack":  daysToTrack])
-        
-        print(daysToTrack)
+        newDocument.setData(["name": name, "description": description, "category": cate, "color": cateColor, "startDate": startDate, "datesOfThatWeek":  datesOfThatWeek, "finishedDates": finishedDates, "active": true])
         
     }
     
     
     func addDate() -> String {
-        let currentDateTime = Date()
+        
+        let dateInWeek = Date().dayBefore.dayBefore.dayBefore.dayBefore
+        print(dateInWeek)
+        let calendar = Calendar(identifier: .gregorian)
+
+        let dayOfWeek = calendar.component(.weekday, from: dateInWeek)
+        
+        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: dateInWeek)!
+        let days = (dayOfWeek ..< weekdays.upperBound)
+            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: dateInWeek) }
+        
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         
-        let dateTimeString = formatter.string(from: currentDateTime)
-        return dateTimeString
+        for (idx, day) in days.enumerated() {
+            if  daysToTrack[7 - dayOfWeek - 1 + idx - 1] {
+                let dateString = formatter.string(from: day)
+                datesOfThatWeek.append(dateString)
+            }
+        }
+        return datesOfThatWeek[0]
     }
     
     
@@ -181,43 +224,53 @@ class ComposeViewController: UIViewController {
     
     
     @IBAction func Color0OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[0])
+        nameTextField.backgroundColor = UIColor(colorPalettes[0])
+        cateColor = 0
     }
     
     @IBAction func Color1OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[1])
+        nameTextField.backgroundColor = UIColor(colorPalettes[1])
+        cateColor = 1
     }
     
     @IBAction func Color2OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[2])
+        nameTextField.backgroundColor = UIColor(colorPalettes[2])
+        cateColor = 2
     }
     
     @IBAction func Color3OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[3])
+        nameTextField.backgroundColor = UIColor(colorPalettes[3])
+        cateColor = 3
     }
     
     @IBAction func Color4OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[4])
+        nameTextField.backgroundColor = UIColor(colorPalettes[4])
+        cateColor = 4
     }
     
     @IBAction func Color5OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[5])
+        nameTextField.backgroundColor = UIColor(colorPalettes[5])
+        cateColor = 5
     }
     
     @IBAction func Color6OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[6])
+        nameTextField.backgroundColor = UIColor(colorPalettes[6])
+        cateColor = 6
     }
     
     @IBAction func Color7OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[7])
+        nameTextField.backgroundColor = UIColor(colorPalettes[7])
+        cateColor = 7
     }
     
     @IBAction func Color8OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[8])
+        nameTextField.backgroundColor = UIColor(colorPalettes[8])
+        cateColor = 8
     }
     
     @IBAction func Color9OnClicked(_ sender: Any) {
-        colorLabel.backgroundColor = UIColor(colorPalettes[9])
+        nameTextField.backgroundColor = UIColor(colorPalettes[9])
+        cateColor = 9
     }
     
     
